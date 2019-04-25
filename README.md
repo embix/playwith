@@ -5,4 +5,4 @@ some scripts to remember when playing with [k8s](https://labs.play-with-k8s.com/
 
 i.e. to set up kubeless in labs.play-with-k8s:
 
-    curl https://raw.githubusercontent.com/embix/playwith/master/kubernetes/init-master-with-network.sh | bash
+    curl https://raw.githubusercontent.com/embix/playwith/master/kubernetes/init-k8s-with-kubeless.sh | bash

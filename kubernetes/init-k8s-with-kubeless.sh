@@ -19,7 +19,7 @@ export OS=$(uname -s| tr '[:upper:]' '[:lower:]')
 curl -OL https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless_$OS-amd64.zip
 # basically `unzip kubeless_$OS-amd64.zip` but play with k8s has neither unzip nor apk
 # so we have to improvise...
-docker run -it --rm -v $PWD:/halp ubuntu:latest unzip /halp/kubeless_$OS-amd64.zip
+docker run -t --rm -v $PWD:/halp alpine:latest /bin/sh -c "apk update && apk add unzip && cd /halp && unzip kubeless_$OS-amd64.zip && ls -la"
 mv bundles/kubeless_$OS-amd64/kubeless /usr/local/bin/
 
 # final check
