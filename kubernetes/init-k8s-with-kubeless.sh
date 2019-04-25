@@ -23,4 +23,4 @@ docker run -t --rm -v $PWD:/halp alpine:latest /bin/sh -c "apk update && apk add
 mv bundles/kubeless_$OS-amd64/kubeless /usr/local/bin/
 
 # final check
-which kubeless
+kubeless --help
