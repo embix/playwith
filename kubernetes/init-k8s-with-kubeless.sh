@@ -24,3 +24,7 @@ mv bundles/kubeless_$OS-amd64/kubeless /usr/local/bin/
 
 # final check
 kubeless --help
+
+# kubeless does not run on masters out of the box :-/
+echo "remember to fire up some workers:"
+kubeadm token create --print-join-command
