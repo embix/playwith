@@ -24,6 +24,8 @@ mv bundles/kubeless_$OS-amd64/kubeless /usr/local/bin/
 
 # final check
 kubeless --help
+# list supported language runtimes
+kubeless get-server-config
 
 # kubeless does not run on masters out of the box :-/
 echo "remember to fire up some workers:"
